@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Encuestas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Aplicación de Encuestas</h1>
+    </header>
+    <main>
+        <section id="create-survey">
+            <h2>Crear Nueva Encuesta</h2>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label for="survey-title">Título de la Encuesta:</label>
+                    <input type="text" id="survey-title" name="survey-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="question-type">Tipo de Pregunta:</label>
+                    <select id="question-type" name="question-type">
+                        <option value="multipleChoice">Opción Múltiple</option>
+                        <option value="text">Texto</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="question-text">Texto de la Pregunta:</label>
+                    <input type="text" id="question-text" name="question-text" required>
+                </div>
+                <div id="multiple-choice-options" class="form-group" style="display: none;">
+                    <label for="options">Opciones:</label>
+                    <input type="text" name="option" placeholder="Opción 1">
+                    <input type="text" name="option" placeholder="Opción 2">
+                    <button type="button" id="add-option">Agregar Opción</button>
+                </div>
+                <button type="submit">Crear Pregunta</button>
+            </form>
+        </section>
+        <section id="survey-results">
+            <h2>Resultados de la Encuesta</h2>
+            <div id="results"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
